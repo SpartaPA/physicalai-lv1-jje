@@ -1,0 +1,9 @@
+# 99-robot-sensor.rules (for delivery robot)
+# 구분 속성: backing_file(/sys/block/loopN/loop/backing_file)에 적힌 속성 = losetup으로 붙인 이미지 파일 경로
+
+# lidar: /dev/loop17 -> /dev/robot_lidar
+SUBSYSTEM=="block", KERNEL=="loop*", ATTR{loop/backing_file}=="/home/pa34/fake_sensors/lidar.img", ATTR{size}=="32768", SYMLINK+="robot_lidar", MODE="0660", GROUP="dialout"
+
+# imu: /dev/loop18 -> /dev/robot_imu
+SUBSYSTEM=="block", KERNEL=="loop*", ATTR{loop/backing_file}=="/home/pa34/fake_sensors/imu.img", ATTR{size}=="49152", SYMLINK+="robot_imu", MODE="0660", GROUP="dialout"
+
