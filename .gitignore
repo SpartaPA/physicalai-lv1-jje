@@ -1,0 +1,27 @@
+.venv/
+.vscode/
+build/
+install/
+log/
+lecture/
+build.log
+.pytest_cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.virtual_documents/
+*.o
+
+# 확장자 없는 컴파일 바이너리 (g++ 단일 빌드 산출물)
+lv1_module2/cpp_basics/motor_app
+lv1_module2/cpp_basics/stop_distance
+lv1_module2/cpp_basics/sensors/clamp
+lv1_module2/cpp_basics/sensors/fixed_asan
+lv1_module2/cpp_basics/sensors/leak_asan
+lv1_module2/cpp_basics/sensors/sensors_demo
+lv1_module2/cpp_basics/sensors/sensors_demo_novirtual
+
+# OS
+Thumbs.db
+.DS_Store
